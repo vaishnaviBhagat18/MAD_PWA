@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Service Worker PWA App</h1>
+    <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
+</body>
+</html>
+
+
+<!-- 🧠 4. Explanation (write this)
+Dynamic caching stores data during runtime.
+When a request is made:
+Check cache first
+If not found → fetch from network
+Then store it in cache
+This helps in caching new content automatically.
+🎯 5. Output / Result
+First time → data fetched from internet
+Next time → served from cache
+Works partially offline
+🎤 6. Viva Questions (IMPORTANT)
+
+Q1. What is dynamic caching?
+→ Caching data at runtime.
+
+Q2. Difference between static and dynamic caching?
+→ Static = predefined files, Dynamic = runtime caching.
+
+Q3. Why use clone()?
+→ Because response can be used only once.
+
+Q4. What is cache.put()?
+→ Stores request-response pair in cache. -->

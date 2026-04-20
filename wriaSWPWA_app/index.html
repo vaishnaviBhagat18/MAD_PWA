@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Service Worker PWA App  </h1>
+    <script id="d8k3zp">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (registration) {
+                    console.log("Service Worker Registered");
+                })
+                .catch(function (error) {
+                    console.log("Service Worker Registration Failed", error);
+                });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- 🧠 4. Explanation (write this)
+A Service Worker is a JavaScript file that runs in the background.
+It enables features like:
+Offline support
+Caching
+Push notifications
+Lifecycle:
+Register → Browser registers service worker
+Install → Resources are prepared/cached
+Activate → Service worker becomes active
+In this program, install and activate events are logged in console.
+🎯 5. Output / Result
+Open browser console:
+"Service Worker Registered"
+"Service Worker Installed"
+"Service Worker Activated"
+🎤 6. Viva Questions (VERY IMPORTANT)
+
+Q1. What is Service Worker?
+→ A script that runs in background for PWA features.
+
+Q2. What are its main uses?
+→ Offline support, caching, push notifications.
+
+Q3. What is install event?
+→ It prepares and caches resources.
+
+Q4. What is activate event?
+→ It activates the service worker.
+
+Q5. Why HTTPS required?
+→ For security reasons. -->

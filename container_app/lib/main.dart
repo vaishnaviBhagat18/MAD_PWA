@@ -1,4 +1,4 @@
-// Use Container Widget with child property
+// Use Container Widget 
 
 import 'package:flutter/material.dart';
 
@@ -9,17 +9,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Container Example")),
+        appBar: AppBar(title: Text("Container Widget Example")),
         body: Center(
           child: Container(
             width: 200,
             height: 200,
-            color: Colors.blue,
-            child: Center(
-              child: Text(
-                "Hello Flutter",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
+            //color: Colors.blue,
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              border: Border.all(color: Colors.black, width: 2),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Text(
+              "Hello Flutter",
+              style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           ),
         ),

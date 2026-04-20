@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Service Worker PWA App</h1>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log("Service Worker Registered"));
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- 🧠 4. Explanation (write this)
+Static caching stores fixed files (HTML, CSS, JS) in cache.
+During install, files are cached using cache.addAll().
+During fetch, cached files are served first.
+If not found → fetched from network.
+This enables offline functionality.
+🎯 5. Output / Result
+Website loads normally
+After first load → works even without internet
+🎤 6. Viva Questions (IMPORTANT)
+
+Q1. What is caching?
+→ Storing files locally for faster access/offline use.
+
+Q2. What is static caching?
+→ Caching fixed resources like HTML, CSS.
+
+Q3. What is CACHE_NAME?
+→ Name of cache storage.
+
+Q4. What does fetch event do?
+→ Handles network requests.
+
+Q5. What is caches.match()?
+→ Finds request in cache. -->
